@@ -27,6 +27,17 @@ navbar nav {
 	border: none;
 	border-radius: 0;
 }
+.card a {
+	text-decoration: none;
+	color: #454545;
+}
+.breadcrumb {
+	background-color: #fff;
+}
+
+.breadcrumb a {
+	color: #454545;
+}
 
 /* Mobile Device */
 @media (max-width: 575px) {

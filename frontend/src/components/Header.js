@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import { IoCartOutline } from "react-icons/io5";
-import Hero from "./Hero";
 
 const Header = () => {
 	return (
@@ -15,26 +15,33 @@ const Header = () => {
 					collapseOnSelect
 				>
 					<Container>
-						<Navbar.Brand href="/">Cshop</Navbar.Brand>
+						<LinkContainer to="/">
+							<Navbar.Brand>Cshop</Navbar.Brand>
+						</LinkContainer>
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Collapse id="basic-navbar-nav">
 							<Nav className="mr-0">
-								<Nav.Link href="#">Shop</Nav.Link>
-								<Nav.Link href="#">About</Nav.Link>
-								<Nav.Link href="#">Contact</Nav.Link>
-								<Nav.Link href="#">Collections</Nav.Link>
+								<LinkContainer to="/">
+									<Nav.Link>Shop</Nav.Link>
+								</LinkContainer>
+								<LinkContainer to="/">
+									<Nav.Link>Collections</Nav.Link>
+								</LinkContainer>
 							</Nav>
 							<Nav className="ml-auto">
-								<Nav.Link href="/cart">
-									<IoCartOutline />
-								</Nav.Link>
-								<Nav.Link href="/login">Login</Nav.Link>
+								<LinkContainer to="/cart">
+									<Nav.Link>
+										<IoCartOutline />
+									</Nav.Link>
+								</LinkContainer>
+								<LinkContainer to="/login">
+									<Nav.Link>Login</Nav.Link>
+								</LinkContainer>
 							</Nav>
 						</Navbar.Collapse>
 					</Container>
 				</Navbar>
 			</header>
-			<Hero />
 		</>
 	);
 };

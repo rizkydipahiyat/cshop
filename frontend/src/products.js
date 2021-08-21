@@ -26,7 +26,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
-		_id: "2",
+		_id: "3",
 		name: "Ceramic Mug",
 		image: "/images/img3.jpg",
 		description:
@@ -39,7 +39,7 @@ const products = [
 		numReviews: 12,
 	},
 	{
-		_id: "2",
+		_id: "4",
 		name: "Bao Ceramic Mug",
 		image: "/images/img4.jpg",
 		description:
