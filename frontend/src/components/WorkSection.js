@@ -37,7 +37,10 @@ const WorkSection = () => {
 					</p>
 				</Col>
 				<Col className="mt-5">
-					<Image src="https://images.squarespace-cdn.com/content/v1/58df25dc6a4963762c660f5d/1514867600491-50YXO8Q7PBDPEV54W4B6/Gaya_Ceramic_work_table_settings_decorations_project.jpg?format=500w" />
+					<Image
+						className="work-img"
+						src="https://images.squarespace-cdn.com/content/v1/58df25dc6a4963762c660f5d/1514867600491-50YXO8Q7PBDPEV54W4B6/Gaya_Ceramic_work_table_settings_decorations_project.jpg?format=500w"
+					/>
 				</Col>
 			</Row>
 		</>

@@ -20,9 +20,25 @@ navbar nav {
 .hero h1 {
 	padding: 190px;
 	color: #1a1818;
+	font-size: 40px;
 }
 .card {
 	cursor: pointer;
 	border: none;
 	border-radius: 0;
+}
+
+/* Mobile Device */
+@media (max-width: 575px) {
+	.hero {
+		width: 100%;
+	}
+	.hero h1 {
+		text-align: center !important;
+		margin-left: -45px;
+		font-size: 20px;
+	}
+	.work-img {
+		visibility: hidden;
+	}
 }
