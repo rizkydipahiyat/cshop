@@ -7,7 +7,13 @@ const Header = () => {
 	return (
 		<>
 			<header>
-				<Navbar bg="light" variant="light" expand="md" collapseOnSelect>
+				<Navbar
+					bg="light"
+					variant="light"
+					expand="md"
+					className="fixed-top"
+					collapseOnSelect
+				>
 					<Container>
 						<Navbar.Brand href="/">Cshop</Navbar.Brand>
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />

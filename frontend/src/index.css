@@ -21,3 +21,8 @@ navbar nav {
 	padding: 190px;
 	color: #1a1818;
 }
+.card {
+	cursor: pointer;
+	border: none;
+	border-radius: 0;
+}
