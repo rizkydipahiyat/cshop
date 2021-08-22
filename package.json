@@ -1,0 +1,33 @@
+{
+	"name": "cshop",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"type": "module",
+	"dependencies": {
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"express-async-handler": "^1.1.4",
+		"mongoose": "^5.13.7"
+	},
+	"devDependencies": {
+		"concurrently": "^6.2.1",
+		"nodemon": "^2.0.12"
+	},
+	"scripts": {
+		"start": "node backend/server",
+		"server": "nodemon backend/server",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rizkydipahiyat/cshop.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/rizkydipahiyat/cshop/issues"
+	},
+	"homepage": "https://github.com/rizkydipahiyat/cshop#readme"
+}
