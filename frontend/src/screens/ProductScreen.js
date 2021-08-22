@@ -37,7 +37,7 @@ const ProductScreen = ({ match }) => {
 							<ListGroup.Item>
 								<Row>
 									<Col>Name</Col>
-									<Col>:</Col>
+									{" : "}
 									<Col>
 										{" "}
 										<strong>{product.name}</strong>{" "}
@@ -47,7 +47,7 @@ const ProductScreen = ({ match }) => {
 							<ListGroup.Item>
 								<Row>
 									<Col>Price </Col>
-									<Col>:</Col>
+									{" : "}
 									<Col>
 										{" "}
 										<strong>${product.price}</strong>{" "}
@@ -57,7 +57,7 @@ const ProductScreen = ({ match }) => {
 							<ListGroup.Item>
 								<Row>
 									<Col>Status </Col>
-									<Col>:</Col>
+									{" : "}
 									<Col>
 										{product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
 									</Col>
@@ -66,7 +66,7 @@ const ProductScreen = ({ match }) => {
 							<ListGroup.Item>
 								<Row>
 									<Col>Description </Col>
-									<Col>:</Col>
+									{" : "}
 									<Col></Col>
 								</Row>
 							</ListGroup.Item>
