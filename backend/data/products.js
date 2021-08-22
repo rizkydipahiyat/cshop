@@ -1,6 +1,5 @@
 const products = [
 	{
-		_id: "1",
 		name: "Susana Requena Ceramics",
 		image: "/images/img1.jpg",
 		description:
@@ -13,7 +12,6 @@ const products = [
 		numReviews: 12,
 	},
 	{
-		_id: "2",
 		name: "Ceramic Chesse Forms",
 		image: "/images/img2.jpg",
 		description:
@@ -26,7 +24,6 @@ const products = [
 		numReviews: 12,
 	},
 	{
-		_id: "3",
 		name: "Ceramic Mug",
 		image: "/images/img3.jpg",
 		description:
@@ -39,7 +36,6 @@ const products = [
 		numReviews: 12,
 	},
 	{
-		_id: "4",
 		name: "Bao Ceramic Mug",
 		image: "/images/img4.jpg",
 		description:
