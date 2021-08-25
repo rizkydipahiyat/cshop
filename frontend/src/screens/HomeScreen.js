@@ -5,6 +5,8 @@ import WorkSection from "../components/WorkSection";
 import Hero from "../components/Hero";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
 
 const HomeScreen = () => {
 	const dispatch = useDispatch();
@@ -20,9 +22,9 @@ const HomeScreen = () => {
 			<Hero />
 			<h3 className="mt-5 mb-3">Latest Products</h3>
 			{loading ? (
-				<h2>loading...</h2>
+				<Loader />
 			) : error ? (
-				<h3>{error}</h3>
+				<Message variant="danger">{error}</Message>
 			) : (
 				<Row>
 					{products.map((product) => (
