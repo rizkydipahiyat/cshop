@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
 	Breadcrumb,
 	Image,
@@ -8,6 +8,7 @@ import {
 	ListGroup,
 	Card,
 	Button,
+	Form,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,7 +16,9 @@ import { listProductDetails } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 
-const ProductScreen = ({ match }) => {
+const ProductScreen = ({ history, match }) => {
+	const [qty, setQty] = useState(0);
+
 	const dispatch = useDispatch();
 
 	const productDetails = useSelector((state) => state.productDetails);
@@ -24,6 +27,10 @@ const ProductScreen = ({ match }) => {
 	useEffect(() => {
 		dispatch(listProductDetails(match.params.id));
 	}, [dispatch, match]);
+
+	const addToCartHandler = () => {
+		history.push(`/cart/${match.params.id}?qty=${qty}`);
+	};
 	return (
 		<>
 			<Row>
@@ -81,6 +88,25 @@ const ProductScreen = ({ match }) => {
 								</ListGroup.Item>
 								<ListGroup.Item>
 									<Row>
+										<Col>Qty </Col>
+										{" : "}
+										<Col>
+											<Form.Control
+												as="select"
+												value={qty}
+												onChange={(e) => setQty(e.target.value)}
+											>
+												{[...Array(product.countInStock).keys()].map((x) => (
+													<option key={x + 1} value={x + 1}>
+														{x + 1}
+													</option>
+												))}
+											</Form.Control>
+										</Col>
+									</Row>
+								</ListGroup.Item>
+								<ListGroup.Item>
+									<Row>
 										<Col>Description </Col>
 										{" : "}
 										<Col></Col>
@@ -93,6 +119,7 @@ const ProductScreen = ({ match }) => {
 								</ListGroup.Item>
 								<ListGroup.Item>
 									<Button
+										onClick={addToCartHandler}
 										className="btn-dark btn-block"
 										type="button"
 										disabled={product.countInStock === 0}
