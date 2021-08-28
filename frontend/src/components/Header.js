@@ -20,13 +20,7 @@ const Header = () => {
 	return (
 		<>
 			<header>
-				<Navbar
-					bg="light"
-					variant="light"
-					expand="md"
-					className="fixed-top"
-					collapseOnSelect
-				>
+				<Navbar bg="light" variant="light" expand="md" collapseOnSelect>
 					<Container>
 						<LinkContainer to="/">
 							<Navbar.Brand>Cshop</Navbar.Brand>

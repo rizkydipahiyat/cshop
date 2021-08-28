@@ -33,7 +33,7 @@ const ProductScreen = ({ history, match }) => {
 	return (
 		<>
 			<Row>
-				<Breadcrumb className="mt-5" bg="light">
+				<Breadcrumb bg="light">
 					<Breadcrumb.Item>
 						<Link to="/">Home</Link>
 					</Breadcrumb.Item>
