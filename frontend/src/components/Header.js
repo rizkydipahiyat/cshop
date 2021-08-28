@@ -1,9 +1,13 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Badge } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { IoCartOutline } from "react-icons/io5";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+	const cart = useSelector((state) => state.cart);
+	const { cartItems } = cart;
+
 	return (
 		<>
 			<header>
@@ -32,6 +36,7 @@ const Header = () => {
 								<LinkContainer to="/cart">
 									<Nav.Link>
 										<IoCartOutline />
+										<Badge bg="danger">{cartItems.length}</Badge>
 									</Nav.Link>
 								</LinkContainer>
 								<LinkContainer to="/login">
