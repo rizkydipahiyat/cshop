@@ -1,13 +1,22 @@
 import React from "react";
-import { Navbar, Nav, Container, Badge } from "react-bootstrap";
+import { Navbar, Nav, Container, Badge, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { IoCartOutline } from "react-icons/io5";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../actions/userActions";
 
 const Header = () => {
+	const dispatch = useDispatch();
+
+	const userLogin = useSelector((state) => state.userLogin);
+	const { userInfo } = userLogin;
+
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
 
+	const logoutHandler = () => {
+		dispatch(logout());
+	};
 	return (
 		<>
 			<header>
@@ -39,9 +48,17 @@ const Header = () => {
 										<Badge bg="danger">{cartItems.length}</Badge>
 									</Nav.Link>
 								</LinkContainer>
-								<LinkContainer to="/login">
-									<Nav.Link>Login</Nav.Link>
-								</LinkContainer>
+								{userInfo ? (
+									<NavDropdown title={userInfo.name} id="username">
+										<NavDropdown.Item onClick={logoutHandler}>
+											Logout
+										</NavDropdown.Item>
+									</NavDropdown>
+								) : (
+									<LinkContainer to="/login">
+										<Nav.Link>Login</Nav.Link>
+									</LinkContainer>
+								)}
 							</Nav>
 						</Navbar.Collapse>
 					</Container>
