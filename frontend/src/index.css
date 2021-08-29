@@ -38,6 +38,10 @@
 	color: #454545;
 }
 
+h6 {
+	opacity: 75%;
+}
+
 /* Mobile Device */
 @media (max-width: 575px) {
 	.hero {
