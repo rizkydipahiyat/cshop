@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const FormContainer = ({ children }) => {
 	return (
-		<Container className="m-5 p-5">
+		<Container>
 			<Row className="justify-content-md-center">
 				<Col xs={12} md={6}>
 					{children}
