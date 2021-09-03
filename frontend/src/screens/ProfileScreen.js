@@ -23,11 +23,11 @@ const ProfileScreen = ({ history }) => {
 	const userLogin = useSelector((state) => state.userLogin);
 	const { userInfo } = userLogin;
 
-	const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
-	const { success } = userUpdateProfile;
-
 	const orderListMy = useSelector((state) => state.orderListMy);
 	const { loading: loadingOrders, error: errorOrders, orders } = orderListMy;
+
+	const userUpdateProfile = useSelector((state) => state.userUpdateProfile);
+	const { success } = userUpdateProfile;
 
 	useEffect(() => {
 		if (!userInfo) {
