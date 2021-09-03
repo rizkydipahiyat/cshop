@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import Product from "../components/Product";
 import WorkSection from "../components/WorkSection";
-import Hero from "../components/Hero";
+// import Hero from "../components/Hero";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import Loader from "../components/Loader";
@@ -20,7 +20,7 @@ const HomeScreen = () => {
 	}, [dispatch]);
 	return (
 		<>
-			<Hero />
+			{/* <Hero /> */}
 			<Meta />
 			<h3 className="mt-5 mb-3">Latest Products</h3>
 			{loading ? (
