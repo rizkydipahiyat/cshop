@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Container, Badge, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { IoCartOutline } from "react-icons/io5";
 import { useSelector, useDispatch } from "react-redux";
