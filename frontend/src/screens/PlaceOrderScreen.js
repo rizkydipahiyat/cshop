@@ -68,7 +68,7 @@ const PlaceOrderScreen = ({ history }) => {
 						</ListGroup.Item>
 						<ListGroup.Item>
 							<h6>Payment Method</h6>
-							<h6>Method: </h6>
+							<strong>Method: </strong>
 							{cart.paymentMethod}
 						</ListGroup.Item>
 						<ListGroup.Item>
