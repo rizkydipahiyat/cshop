@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import Meta from "../components/Meta";
 
 const HomeScreen = () => {
 	const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const HomeScreen = () => {
 	return (
 		<>
 			<Hero />
+			<Meta />
 			<h3 className="mt-5 mb-3">Latest Products</h3>
 			{loading ? (
 				<Loader />

@@ -7,6 +7,7 @@ import Loader from "../components/Loader";
 import { getUserDetails, updateUserProfile } from "../actions/userActions";
 import { listMyOrders } from "../actions/orderActions";
 import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
+import Meta from "../components/Meta";
 
 const ProfileScreen = ({ history }) => {
 	const [name, setName] = useState("");
@@ -55,6 +56,7 @@ const ProfileScreen = ({ history }) => {
 	};
 	return (
 		<Row>
+			<Meta title="CShop | Profile" />
 			<Col md={3}>
 				<div as="h2">User Profile</div>
 				{message && <Message variant="danger">{message}</Message>}

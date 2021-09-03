@@ -8,6 +8,7 @@ import { getOrderDetails, payOrder } from "../actions/orderActions";
 import axios from "axios";
 import { ORDER_PAY_RESET } from "../constants/orderConstants";
 import { PayPalButton } from "react-paypal-button-v2";
+import Meta from "../components/Meta";
 
 const OrderScreen = ({ match }) => {
 	const [sdkReady, setSdkReady] = useState(false);
@@ -63,6 +64,7 @@ const OrderScreen = ({ match }) => {
 	) : (
 		<>
 			<Row>
+				<Meta title="CShop | Order" />
 				<Col md={8}>
 					<ListGroup variant="flush">
 						<ListGroup.Item>

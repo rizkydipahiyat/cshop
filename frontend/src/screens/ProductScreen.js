@@ -14,6 +14,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProductDetails } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import Meta from "../components/Meta";
 
 const ProductScreen = ({ history, match }) => {
 	const [qty, setQty] = useState(1);
@@ -46,6 +47,7 @@ const ProductScreen = ({ history, match }) => {
 				<Message variant="danger">{error}</Message>
 			) : (
 				<Row>
+					<Meta title={product.name} />
 					<Col md={6}>
 						<Image
 							src={product.image}
