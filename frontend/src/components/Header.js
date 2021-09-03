@@ -11,9 +11,6 @@ const Header = () => {
 	const userLogin = useSelector((state) => state.userLogin);
 	const { userInfo } = userLogin;
 
-	const cart = useSelector((state) => state.cart);
-	const { cartItems } = cart;
-
 	const logoutHandler = () => {
 		dispatch(logout());
 	};
@@ -39,7 +36,6 @@ const Header = () => {
 								<LinkContainer to="/cart">
 									<Nav.Link>
 										<IoCartOutline />
-										<Badge bg="danger">{cartItems.length}</Badge>
 									</Nav.Link>
 								</LinkContainer>
 								{userInfo ? (
