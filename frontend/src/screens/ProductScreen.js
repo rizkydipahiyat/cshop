@@ -50,6 +50,7 @@ const ProductScreen = ({ history, match }) => {
 					<Meta title={product.name} />
 					<Col md={6}>
 						<Image
+							fetchPriority="high"
 							src={product.image}
 							style={{ width: "397px", height: "397px" }}
 							alt={product.name}
